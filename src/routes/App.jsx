@@ -50,7 +50,7 @@ import Periodos from "@containers/Periodos";
 import Boleta from "@components/Boleta";
 import VistaGruposForm from "@components/tablaGruposForm";
 import VistaMateriasForm from "@components/tablaMateriasForm";
-import VistaEmpleado from "../components/VistaEmpleado";
+import VistaEmpleado from "@components/VistaEmpleado";
 
 const App=()=>{
     const operacion=useOperacion()
