@@ -1,0 +1,53 @@
+.capa {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: -1;
+	top: 0;
+	left: 0;
+}
+.constancia{
+  color: white;
+  text-decoration-style: none;
+  text-decoration-line: none;
+  font-size: 20px;
+  font-weight: 700!important;
+  border: 2px solid white;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.452);
+  width: 200px;
+  height: 150px;
+  color: cyan;
+
+}
+.mensajeIConst{
+  margin-top: 10px;
+  height:150px;
+  background: rgba(0, 0, 0, 0.6);
+  width: 710px;
+  margin-left: 25px;
+}
+.constancia:hover{
+  color: white;
+  text-decoration-style: none;
+  text-decoration-line: none;
+  cursor: pointer;
+}
+
+.contTramites{
+  margin: 250px;
+  height: 550px;
+  width: 800px;
+  background: rgba(255,255,255,0.1);
+  margin-top: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(255,255,255,0.5);
+  backdrop-filter: blur(3px);
+}
+.conssemestre{
+  margin-top:20px;
+  margin-left:40px;
+}

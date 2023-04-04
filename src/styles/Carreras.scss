@@ -1,0 +1,120 @@
+.capa {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: -1;
+	top: 0;
+	left: 0;
+}
+.carre{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  margin-left: 50px;
+  margin-top: 70px;
+}
+.carre figure{
+  position: relative;
+  height: 150px;
+  width: 190px;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.carre figure img{
+  width: 100%;
+  height: 100%;
+  transition: all 500ms ease-out;
+}
+
+h1{
+  color: #fff;
+}
+.carre figure .btnca{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 103, 123, 0.7);
+  transition: all 500ms ease-out;
+  opacity: 0;
+  visibility: hidden;
+  text-align: center;
+}
+.carre figure:hover > .btnca{
+  opacity: 1;
+  visibility: visible;
+
+}
+
+.carre figure:hover > img{
+  transform: scale(1.3);
+
+}
+
+
+.carre figure .btnca{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 103, 123, 0.7);
+  transition: all 500ms ease-out;
+  opacity: 0;
+  visibility: hidden;
+  text-align: center;
+}
+.carre figure:hover > .btnca{
+  opacity: 1;
+  visibility: visible;
+
+}
+
+.carre figure:hover > .btnca button{
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-top: 5px;
+  width: 250px;
+  height: 100px;
+  margin: auto;
+}
+
+.carre figure{
+  margin-right: 10px;
+}
+
+.set1{
+
+  width: 100%;
+  height: 200px;
+
+}
+.set2{
+
+  width: 100%;
+  height: 200px;
+
+}
+
+.set3{
+
+  width: 100%;
+  height: 200px;
+
+}
+
+.contcarreras{
+  width: 750px;
+  height: 640px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(3px);
+}

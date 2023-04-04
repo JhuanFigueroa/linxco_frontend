@@ -1,0 +1,66 @@
+.capa {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: -1;
+	top: 0;
+	left: 0;
+}
+.contenedor{
+
+  height: 450px;
+  width: 900px;
+  background: rgba(255, 255, 255, 0.1);
+
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(3px);
+}
+
+.buscador{
+  margin-top: 50px;
+  margin-left: 50px;
+
+}
+
+.form-inline{
+  margin-left: 140px;
+}
+
+.form-control{
+  border-radius: 1rem;
+  background-color: rgba(253, 252, 252, 0.1);
+  width: 600px;
+  height: 43px;
+  color: rgb(7, 6, 6);
+  margin-top: 10px;
+}
+
+.btn-outline-primaryy{
+  margin-top: 1px;
+  text-size-adjust: unset;
+  border: 3px solid #57afe9;
+  cursor: pointer;
+  background-color: rgba(150, 140, 140, 0.89);
+}
+
+.table{
+  color: #fff;
+  border-radius: 0.5rem;
+  margin-top: 15px;
+  margin-left: 1px;
+  margin-bottom: auto;
+  table-layout: auto;
+  text-align: center;
+}
+
+.btnEdit{
+  background-color: transparent;
+  border: 1px solid rgb(74, 228, 86);
+  width: 50px;
+  height: 50px;
+  background-image: url('../assets/imgs/edit.png');
+  background-repeat: no-repeat;
+}

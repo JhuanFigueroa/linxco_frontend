@@ -1,0 +1,153 @@
+ .vistaCarreFo{
+    margin-top: 50px;
+ 	height: auto;
+ 	width: 450px;
+ 	background: rgba(255, 255, 255, 0.1);
+ 	padding: 20px;
+ 	border-radius: 10px;
+ 	box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+ 	backdrop-filter: blur(3px);
+ }
+ .vistaFGr{
+    width: 450px ;
+ }
+ .tableMa{
+ 	color: #fff;
+ 	border-radius: 0.5rem;
+ 	margin-top: 30px;
+ 	margin-left: 1px;
+ 	margin-bottom: auto;
+ 	table-layout: auto;
+ 	text-align: center;
+ }
+ .btnEditMa{
+ 	background-color: transparent;
+ 	border: 1px solid rgb(74, 228, 86);
+     border-radius: 0.4rem;
+ 	width: 50px;
+ 	height: 50px;
+ 	background-image: url(../assets/imgs/edit.png);
+ 	background-repeat: no-repeat;
+ }
+ .btnDeleteMa{
+ 	background-color: transparent;
+ 	border-radius: 0.4rem;
+ 	border: 1px solid rgb(255, 0, 0);
+ 	width: 50px;
+ 	height: 50px;
+ 	background-image: url(../assets/imgs/eliminar.png);
+ 	background-repeat: no-repeat;
+ }
+ .btnMa{
+    height: 40px;
+    width: 200px;
+    background-color: transparent;
+    margin-left: 100px;
+    color: white;
+    border: solid 2px rgb(0, 195, 255);
+	margin-bottom: 10px;
+ }
+ @media screen and (min-width: 768px) and (max-width: 1023px) {
+ 	.vistaCarreFo{
+ 		margin-top: 50px;
+ 		margin-left: 50px;
+ 		height: auto;
+ 		width: 450px;
+ 		background: rgba(255, 255, 255, 0.1);
+ 		padding: 20px;
+ 		border-radius: 10px;
+ 		box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+ 		backdrop-filter: blur(3px);
+ 	}
+	 .vistaFGr{
+		width: 450px ;
+	 }
+ 	.tableMa{
+ 		color: #fff;
+ 		border-radius: 0.5rem;
+ 		margin-top: 30px;
+ 		margin-left: 1px;
+ 		margin-bottom: auto;
+ 		table-layout: auto;
+ 		text-align: center;
+ 	}
+ 	.btnEditMa{
+ 		background-color: transparent;
+ 		border: 1px solid rgb(74, 228, 86);
+ 		border-radius: 0.4rem;
+ 		width: 50px;
+ 		height: 50px;
+ 		background-image: url(../assets/imgs/edit.png);
+ 		background-repeat: no-repeat;
+ 	}
+ 	.btnDeleteMa{
+ 		background-color: transparent;
+ 		border-radius: 0.4rem;
+ 		border: 1px solid rgb(255, 0, 0);
+ 		width: 50px;
+ 		height: 50px;
+ 		background-image: url(../assets/imgs/eliminar.png);
+ 		background-repeat: no-repeat;
+ 	}
+ 	.btnMa{
+ 		height: 40px;
+ 		width: 250px;
+ 		background-color: transparent;
+ 		color: white;
+ 		margin-left: 200px;
+ 		border: solid 2px rgb(0, 195, 255);
+ 	}
+ }
+ @media screen and (max-width: 767px) {
+ 	.vistaCarreFo{
+ 		margin-top: 50px;
+ 		margin-left: 50px;
+ 		height: auto;
+ 		width: 450px;
+ 		background: rgba(255, 255, 255, 0.1);
+ 		padding: 20px;
+ 		border-radius: 10px;
+ 		box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+ 		backdrop-filter: blur(3px);
+ 	}
+	 .vistaFGr{
+		width: 450px ;
+	 }
+ 	.tablMa{
+ 		color: #fff;
+ 		border-radius: 0.5rem;
+ 		margin-top: 30px;
+ 		margin-left: 1px;
+ 		margin-bottom: auto;
+ 		table-layout: auto;
+ 		text-align: center;
+ 	}
+ 	.btnEditMa{
+ 		background-color: transparent;
+ 		border: 1px solid rgb(74, 228, 86);
+ 		border-radius: 0.4rem;
+ 		width: 50px;
+ 		height: 50px;
+ 		background-image: url(../assets/imgs/edit.png);
+ 		background-repeat: no-repeat;
+ 	}
+ 	.btnDeleteMa{
+ 		background-color: transparent;
+ 		border-radius: 0.4rem;
+ 		border: 1px solid rgb(255, 0, 0);
+ 		width: 50px;
+ 		height: 50px;
+ 		background-image: url(../assets/imgs/eliminar.png);
+ 		image-rendering: auto;
+ 		background-repeat: no-repeat;
+ 	}
+ 	.btnMa{
+ 		height: 40px;
+ 		width: 200px;
+ 		background-color: transparent;
+ 		color: white;
+ 		margin-top: 20px;
+ 		margin-left: 130px;
+ 		border: solid 2px rgb(0, 195, 255);
+ 	}
+ }

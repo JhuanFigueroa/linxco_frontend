@@ -1,0 +1,156 @@
+
+.consuMate{
+    margin-top: 50px;
+	margin-left: 250px;
+	height: auto;
+	width: 550px;
+	background: rgba(255, 255, 255, 0.1);
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+	backdrop-filter: blur(3px);
+}
+.TituloMate{
+    width: 550px;
+}
+.tableMatC{
+	color: #fff;
+	border-radius: 0.5rem;
+	margin-top: 30px;
+	margin-left: 1px;
+	margin-bottom: auto;
+	table-layout: auto;
+	text-align: center;
+}
+
+.btnEditMaC{
+	background-color: transparent;
+	border: 1px solid rgb(74, 228, 86);
+    border-radius: 0.4rem;
+	width: 50px;
+	height: 50px;
+	background-image: url(../assets/imgs/edit.png);
+	background-repeat: no-repeat;
+}
+.btnDeleteMaC{
+	background-color: transparent;
+	border-radius: 0.4rem;
+	border: 1px solid rgb(255, 0, 0);
+	width: 50px;
+	height: 50px;
+	background-image: url(../assets/imgs/eliminar.png);
+	background-repeat: no-repeat;
+}
+.btnMatC{
+    height: 40px;
+    width: 200px;
+    background-color: transparent;
+    color: white;
+	margin-top: 10px;
+    margin-left: 150px;
+    border: solid 2px rgb(0, 195, 255);
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.consuMate{
+		margin-top: 50px;
+		margin-left: 50px;
+		height: auto;
+		width: 550px;
+		background: rgba(255, 255, 255, 0.1);
+		padding: 20px;
+		border-radius: 10px;
+		box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+		backdrop-filter: blur(3px);
+	}
+    .TituloMate{
+        width: 550px;
+    }
+	.tableMatC{
+		color: #fff;
+		border-radius: 0.5rem;
+		margin-top: 30px;
+		margin-left: 1px;
+		margin-bottom: auto;
+		table-layout: auto;
+		text-align: center;
+	}
+	
+	.btnEditMaC{
+		background-color: transparent;
+		border: 1px solid rgb(74, 228, 86);
+		border-radius: 0.4rem;
+		width: 50px;
+		height: 50px;
+		background-image: url(../assets/imgs/edit.png);
+		background-repeat: no-repeat;
+	}
+	.btnDeleteMaC{
+		background-color: transparent;
+		border-radius: 0.4rem;
+		border: 1px solid rgb(255, 0, 0);
+		width: 50px;
+		height: 50px;
+		background-image: url(../assets/imgs/eliminar.png);
+		background-repeat: no-repeat;
+	}
+	.btnMatC{
+		height: 40px;
+		width: 150px;
+		background-color: transparent;
+		color: white;
+		margin-left: 200px;
+		border: solid 2px rgb(0, 195, 255);
+	}
+}
+@media screen and (max-width: 767px) {
+	.consuMate{
+		margin-top: 50px;
+		margin-left: 50px;
+		height: auto;
+		width: 550px;
+		background: rgba(255, 255, 255, 0.1);
+		padding: 20px;
+		border-radius: 10px;
+		box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+		backdrop-filter: blur(3px);
+	}
+    .TituloMate{
+        width: 550px;
+    }
+	.tableMatC{
+		width: 100px;
+		color: #fff;
+		border-radius: 0.5rem;
+		margin-top: 30px;
+		margin-left: 1px;
+	}
+	
+	.btnEditMaC{
+		background-color: transparent;
+		border: 1px solid rgb(74, 228, 86);
+		border-radius: 0.4rem;
+		width: 50px;
+		height: 50px;
+		background-image: url(../assets/imgs/edit.png);
+		background-repeat: no-repeat;
+	}
+	.btnDeleteMaC{
+		background-color: transparent;
+		border-radius: 0.4rem;
+		border: 1px solid rgb(255, 0, 0);
+		width: 50px;
+		height: 50px;
+		background-image: url(../assets/imgs/eliminar.png);
+		image-rendering: auto;
+		background-repeat: no-repeat;
+	}
+	.btnMatC{
+		height: 30px;
+		width: 150px;
+		background-color: transparent;
+		color: white;
+		margin-top: 20px;
+		margin-left: 150px;
+		border: solid 2px rgb(0, 195, 255);
+	}
+}

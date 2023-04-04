@@ -1,0 +1,86 @@
+.capa {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: -1;
+	top: 0;
+	left: 0;
+}
+.mensajeExamen{
+	width: 600px;
+	height: 150px;
+	margin-top: 10px;
+	margin-left: 35px;
+    background: rgba(0, 0, 0, 0.4);
+	width: 590px;
+}
+.forbienvenida{
+	margin-right: 320px;
+	height: 500px;
+	width: 700px;
+	background: rgba(255, 255, 255, 0.1);
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+	backdrop-filter: blur(3px);
+}
+@media only screen and (max-width: 1450px) {
+	.forbienvenida{
+		margin-left: 300px;
+		height: 600px;
+		width: 700px;
+		background: rgba(255, 255, 255, 0.1);
+		margin-top: 20px;
+		padding: 20px;
+		border-radius: 10px;
+		box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+		backdrop-filter: blur(3px);
+	}
+
+}
+@media only screen and (max-width: 1300px) {
+	
+	.forbienvenida{
+		margin-left: 250px;
+		height: 600px;
+		width: 700px;
+		background: rgba(255, 255, 255, 0.1);
+		margin-top: 20px;
+		padding: 20px;
+		border-radius: 10px;
+		box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+		backdrop-filter: blur(3px);
+	}
+	
+}
+@media only screen and (max-width: 1200px) {
+	
+	.forbienvenida{
+		margin-left: 200px;
+		height: 600px;
+		width: 700px;
+		background: rgba(255, 255, 255, 0.1);
+		margin-top: 20px;
+		padding: 20px;
+		border-radius: 10px;
+		box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+		backdrop-filter: blur(3px);
+	}
+	
+}
+@media only screen and (max-width: 1160px) {
+	
+	.forbienvenida{
+		margin-left: 100px;
+		height: 600px;
+		width: 700px;
+		background: rgba(255, 255, 255, 0.1);
+		margin-top: 20px;
+		padding: 20px;
+		border-radius: 10px;
+		box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+		backdrop-filter: blur(3px);
+	}
+	
+}

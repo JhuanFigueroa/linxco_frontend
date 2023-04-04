@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Poppins&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat Alternates', sans-serif;
+}
+
+body {
+	background-image: url(images/tesji.jpg);
+	background-size: 100vw 130vh;
+	background-repeat: no-repeat;
+}
+
+.capa {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: -1;
+	top: 0;
+	left: 0;
+}
+
+/*Estilos para el encabezado*/
+.header {
+	width: 100%;
+	height: 100px;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.container {
+	width: 90%;
+	max-width: 1200px;
+	margin: auto;
+}
+
+.container-main {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 1rem;
+	color: rgb(156, 202, 142); 
+	margin-left: 10px;
+	
+}
+
+.container .btn-menu,
+.logo {
+	float: left;
+	line-height: 100px;
+}
+
+.container .btn-menu label {
+	color: #fff;
+	font-size: 25px;
+	cursor: pointer;
+}
+
+.logo {
+	color: #fff;
+	font-weight: 400;
+	font-size: 22px;
+	margin-left: 10px;
+	margin-top: 15px;
+	padding-left: 1rem;
+}
+
+.container .menu {
+	float: right;
+	line-height: 100px;
+	color: #fff;
+}
+
+.container .menu a {
+	display: inline-block;
+	padding: 15px;
+	line-height: normal;
+	text-decoration: none;
+	color: #fff;
+	transition: all 0.3s ease;
+	border-bottom: 2px solid transparent;
+	font-size: 15px;
+	margin-right: 5px;
+}
+
+.container .menu a:hover {
+	border-bottom: 2px solid #c7c7c7;
+	padding-bottom: 5px;
+}
+
+.text-center {
+	text-align: center;
+}
+
+/*Fin de Estilos para el encabezado*/
+
+/*Menù lateral*/
+#btn-menu {
+	display: none;
+}
+
+.container-menu {
+	position: absolute;
+	background: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	transition: all 500ms ease;
+	opacity: 0;
+	visibility: hidden;
+}
+
+#btn-menu:checked~.container-menu {
+	opacity: 1;
+	visibility: visible;
+}
+
+.cont-menu {
+	width: 100%;
+	max-width: 250px;
+	background: #1c1c1c;
+	height: 100vh;
+	position: relative;
+	transition: all 500ms ease;
+	transform: translateX(-100%);
+}
+
+#btn-menu:checked~.container-menu .cont-menu {
+	transform: translateX(0%);
+}
+
+.cont-menu nav {
+	transform: translateY(15%);
+}
+
+.cont-menu nav a {
+	display: block;
+	text-decoration: none;
+	padding: 20px;
+	color: #c7c7c7;
+	border-left: 5px solid transparent;
+	transition: all 400ms ease;
+}
+
+.cont-menu nav a:hover {
+	border-left: 5px solid #c7c7c7;
+	background: #1f1f1f;
+}
+
+.cont-menu label {
+	position: absolute;
+	right: 5px;
+	top: 10px;
+	color: #fff;
+	cursor: pointer;
+	font-size: 18px;
+}
+.textMenu{
+	color: aliceblue;
+}
+/*Fin de Menù lateral*/
+
+.contentReins{
+	margin-left: 240px;
+	height: 650px;
+	width: 800px;
+	background: rgba(255, 255, 255, 0.1);
+	margin-top: 10px;
+	border-radius: 5px;
+	box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+	backdrop-filter: blur(3px);
+}
+
+
+.contentReins .form-control{
+	border-radius: 0.4rem;
+	background-color: rgba(0, 0, 0, 0.4)
+}
+.titleCarga{
+	color: rgb(255, 255, 255);
+	text-align: center;
+}
+.checksR{
+	margin-left: 40px;
+	margin-bottom: 30px;
+	color: darkgrey;
+}
+.form-group{
+	margin-left: 30px;
+}
+.btnComboCar{
+	border-radius: 0.5rem;
+	background-color: rgba(255, 255, 255, 0.1);
+}
+.tableR{
+	color: #fff;
+	border-radius: 0.5rem;
+	margin-top: 7px;
+	margin-left: 50px;
+	margin-bottom: auto;
+	table-layout: auto;
+	text-align: center;
+}
+.textTR{
+	height: 100%;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.1);
+	box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+}
+.btnContReins2{
+	margin-left: 630px;
+	margin-top: 10px;
+	width: 150px;
+	border-radius: 0.4rem;
+	margin-left: 100px;
+}
+
+
+.btnContReins3{
+	margin-top: 10px;
+	width: 150px;
+	border-radius: 0.4rem;
+	margin-left: 200px;
+
+}
+
+.form-control{
+	border-radius: 0.3rem;
+	background-color: rgba(0, 0, 0, 0.3);
+	width: 600px;
+	height: 43px;
+	margin-top: 10px;
+	color: #fff;
+}
+.btnAdd{
+	background-color: transparent;
+	border-radius: 0.4rem;
+	color: #fff;
+	border: 3px solid rgb(218, 224, 227);
+	align-items: flex-end;
+	width: 100px;
+	height: 30px;
+	margin-left: 600px;
+}
+
+
+@media (min-width:767px){
+	.contentReins{
+		margin-left: 240px;
+		height: auto;
+		width: 680px;
+		background: rgba(255, 255, 255, 0.1);
+		margin-top: 10px;
+		border-radius: 5px;
+		box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+		backdrop-filter: blur(3px);
+	}
+
+	.btnContReins2{
+		margin-left: 630px;
+		margin-top: 10px;
+		width: 100px;
+		border-radius: 0.4rem;
+		margin-left: 150px;
+	}
+	
+	
+	.btnContReins3{
+		margin-top: 10px;
+		width: 100px;
+		border-radius: 0.4rem;
+		margin-left: 150px;
+	}
+	.btnAdd{
+		background-color: transparent;
+		border-radius: 0.4rem;
+		color: #fff;
+		border: 3px solid rgb(218, 224, 227);
+		align-items: flex-end;
+		width: 100px;
+		height: 30px;
+		margin-left: 500px;
+	}
+	
+}

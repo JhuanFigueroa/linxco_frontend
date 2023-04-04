@@ -1,0 +1,42 @@
+.capa {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: -1;
+	top: 0;
+	left: 0;
+}
+.contenedorss-bajas-forms{
+  height: auto;
+  width: 500px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-top: 2px !important;
+  margin-left: 80px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(3px);
+}
+
+.form-group{
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+.contenedor .form-check{
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+.btn-outline-primary1{
+  width: 200px;
+  height: 100px;
+  margin-top: 140px;
+  text-size-adjust: unset;
+  border-top: 2px solid #004370;
+  border-left: 2px solid #004370;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+}

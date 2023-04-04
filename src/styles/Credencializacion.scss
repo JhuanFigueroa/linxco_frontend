@@ -1,0 +1,100 @@
+/*Estilos para el encabezado*/
+.capa {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: -1;
+	top: 0;
+	left: 0;
+}
+.contentFactReins{
+	margin-top: 10px !important;
+	height: 450px ;
+	width: 950px !important;
+	background: rgba(255, 255, 255, 0.1) !important;
+	margin-top: 70px;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 0 30px rgba(255, 255, 255, 0.5) !important;
+	backdrop-filter: blur(3px);
+}
+.tableFac{
+	width: 850px;
+}
+.contentCredencializacion .titleCarga{
+	margin-top: 5px;
+}
+.form-group-creden{
+	margin-left: 30px;
+}
+.textNC{
+	margin-top: 1px;
+	color: white;
+}
+.format-control{
+	background-color: rgba(255, 255, 255, 0.1);
+	width: 350px;
+	height: 40px;
+	border-radius: 0.5rem;
+}
+.btnComboCar{
+	border-radius: 0.5rem;
+	background-color: rgba(255, 255, 255, 0.1);
+}
+.btnAdd{
+	background-color: transparent;
+	border-radius: 0.4rem;
+	color: #fff;
+	border: 3px solid rgb(0, 162, 255);
+	align-items: flex-end;
+	width: 100px;
+	height: 40px;
+	margin-left: 695px;
+}
+.tableCreden{
+	width: 90%;
+	height: 20%;
+	border-radius: 0.5rem;
+	color: #fff;
+	margin-top: 7px;
+	margin-left: 20px;
+	text-align: center;
+}
+.btnDelete{
+	background-color: transparent;
+	border-radius: 0.4rem;
+	border: 1px solid rgb(255, 0, 0);
+	width: 50px;
+	height: 50px;
+	background-image: url('../assets/imgs/eliminar.png');
+	background-repeat: no-repeat;
+}
+.btnFactsA{
+	border-radius: 0.5rem;
+	height: 40px;
+	width: 150px;
+	margin-left: 150px;
+}
+.btnFactsAB{
+	border-radius: 0.5rem;
+	height: 40px;
+	width: 150px;
+	margin-left: 250px;
+}
+.btnAgregarCreden{
+	margin-left: 640px;
+	width: 150px;
+	border-radius: 0.5rem;
+	height: 35px;
+	background-color: transparent;
+	color: white;
+}
+.btnGuardarCreden{
+	border-radius: 0.5rem;
+	height: 40px;
+	width: 150px;
+	background-color: transparent;
+	color: white;
+	margin-left: 350px;
+}

@@ -1,0 +1,111 @@
+.capa {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: -1;
+	top: 0;
+	left: 0;
+}
+.contentReins-carga{
+  height: auto;
+  width: 850px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-top: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(3px);
+}
+
+.contentReins .form-control{
+  border-radius: 0.4rem;
+  background-color: rgba(0, 0, 0, 0.4)
+}
+.titleCarga{
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+.checksR{
+  margin-left: 140px;
+  color: darkgrey;
+}
+.form-group-cargaIns{
+  margin-left: 30px;
+}
+.btnComboCar{
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.tableR{
+  color: #fff;
+  border-radius: 0.5rem;
+  margin-top: 7px;
+  margin-left: 50px;
+  margin-bottom: auto;
+  table-layout: auto;
+  text-align: center;
+}
+.textTR{
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+}
+.btnContReins2-ca{
+    margin-left: 200px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    width: 170px;
+    height: 40px;
+    border-radius: 0.4rem;
+    background-color: transparent;
+    color: white;
+}
+.btnContReinsCarga{
+  height: 40px;
+  margin-left: 650px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 170px;
+  border-radius: 0.4rem;
+  background-color: transparent;
+  color: white;
+}
+
+.btnContReins3{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 150px;
+  width: 150px;
+  height: 40px;
+  border-radius: 0.4rem;
+  background-color: transparent;
+  color: white;
+}
+
+.form-control{
+  border-radius: 0.3rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 600px;
+  height: 43px;
+  margin-top: 10px;
+  color: #fff;
+}
+.btnAddCarga{
+  background-color: transparent;
+  border-radius: 0.4rem;
+  color: #fff;
+  border: 3px solid rgb(0, 162, 255);
+  align-items: flex-end;
+  width: 100px;
+  height: 30px;
+  margin-left: 680px;
+}
+
+.row-btn{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: -15px;
+  margin-left: -15px;
+}

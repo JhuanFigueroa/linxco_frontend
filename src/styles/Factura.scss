@@ -1,0 +1,61 @@
+.capa {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: -1;
+	top: 0;
+	left: 0;
+}
+.facturaAl{
+  height: 450px;
+  margin-top: 120px;
+  width: 700px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(3px);
+  margin-left: 300px;
+}
+
+.mensajefac{
+  background: rgba(0, 0, 0, 0.4);
+  width: 500px;
+  margin: 0 auto;
+}
+.form-group-FAl{
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.form-control{
+  width: 300px;
+  background: rgba(0, 0, 0, 0.3);
+  color:white;
+  margin-left: 5px;
+}
+
+.tableFacAl{
+  width: 650px;
+  height: auto;
+  margin-top: 20px;
+  color: white;
+  text-align: center;
+}
+.archivosFacA{
+  margin-top: 15px;
+  border: 1px solid rgb(37, 207, 207);
+  width: 500px;
+  color: white;
+}
+.btnArchFac{
+  margin-left: 10px;
+  margin-bottom: 15px;
+}
+.btnFinFacAl{
+  width: 150px;
+  height: 35px;
+  border-radius: 0.5rem;
+  color: white;
+  background-color: transparent;
+}

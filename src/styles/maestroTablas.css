@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Poppins&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat Alternates', sans-serif;
+}
+
+body {
+	background-image: url(tesji.jpg);
+	background-size: 100vw 150vh;
+	background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.capa {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: -1;
+	top: 0;
+	left: 0;
+}
+
+/*Estilos para el encabezado*/
+
+.tableR{
+	color: #fff;
+	border-radius: 0.5rem;
+	margin-top: 15px;
+	margin-left: 50px;
+	margin-bottom: auto;
+	table-layout: auto;
+	text-align: center;
+}
+.contentMaestros{
+	margin-left: 250px;
+	height: 300px;
+	width: 800px;
+	background: rgba(255, 255, 255, 0.1);
+	margin-top: 60px;
+	border-radius: 5px;
+	box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+	backdrop-filter: blur(3px);
+}
+
+.contentMaestros .form-control{
+	border-radius: 0.4rem;
+	background-color: rgba(0, 0, 0, 0.4)
+}
+.btnContReins2{
+	margin-left: 610px;
+	margin-top: 20px;
+	width: 170px;
+	border-radius: 0.4rem;
+	color: white;
+}
+@media only screen and (max-width: 1200px) {
+	
+	.contentMaestros{
+		margin-left: 200px;
+		height: 300px;
+		width: 800px;
+		background: rgba(255, 255, 255, 0.1);
+		margin-top: 60px;
+		border-radius: 5px;
+		box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+		backdrop-filter: blur(3px);
+	}
+	
+	
+}
+@media only screen and (max-width: 1160px) {
+	
+	.contentMaestros{
+		margin-left: 100px;
+		height: 300px;
+		width: 800px;
+		background: rgba(255, 255, 255, 0.1);
+		margin-top: 60px;
+		border-radius: 5px;
+		box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+		backdrop-filter: blur(3px);
+	}
+	
+}
