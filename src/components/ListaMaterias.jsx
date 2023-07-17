@@ -9,7 +9,7 @@ const ListaMaterias=(props)=>{
     const [materiasFinal,setMateriasFinal]=useState([]);
     const getMaterias= async () =>{
 
-        const rta=await axios.get('https://linxcoexpress-production.up.railway.app/api/v1/materias')
+        const rta=await axios.get('http://localhost:3000/api/v1/materias')
         setMaterias(rta.data)
     }
 
@@ -22,7 +22,7 @@ const ListaMaterias=(props)=>{
         let materiasC=[]
      //   const populateData = (data) => {materiasC.push(data)}
         function axiosTest (clave) {
-            axios.get("https://linxcoexpress-production.up.railway.app/api/v1/materias/"+clave)
+            axios.get("http://localhost:3000/api/v1/materias/"+clave)
                 .then(function(response){
                      materiasC=materiasFinal
                     materiasC.push(response.data);
@@ -53,7 +53,7 @@ const ListaMaterias=(props)=>{
     }, []);
 
     return(
-        <div>
+        <div className={"lista-materias"}>
             {materias.map((materia)=>(
               <li key={materia.clave}>
                   <input type="checkbox" name="materias[]" id="materia" value={materia.clave} onChange={(e)=>{
@@ -69,7 +69,7 @@ const ListaMaterias=(props)=>{
                   <label style={{marginTop: "10px", color:"white", marginLeft:"50px"}}>{materia.nombre}</label>
               </li>
             ))}
-            <button style={{marginLeft:"50px"}}onClick={addMaterias}>Continuar</button>
+            <button style={{marginLeft:"50px",marginTop:"20px"}}onClick={addMaterias}>Continuar</button>
         </div>
     )
 }

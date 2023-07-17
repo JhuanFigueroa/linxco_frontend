@@ -24,7 +24,7 @@ const TableAspirantes=()=>{
     const [aspirantes, setAspirantes] = useState([])
 
     const obtenerAspirantes =(clave)=>{
-        const API ='https://linxcoexpress-production.up.railway.app/api/v1/admision/aspiranteB/'+clave+''
+        const API ='http://localhost:3000/api/v1/admision/aspiranteB/'+clave+''
         const rta = axios.get(API).then(res=>{setAspirantes(res.data)});
     }
     // useEffect(() => {

@@ -7,7 +7,7 @@ import axios from "axios";
 import Cookie from "js-cookie";
 import AppContext from "../context/AppContext";
 
-const API ='https://linxcoexpress-production.up.railway.app/api/v1/grupos'
+const API ='http://localhost:3000/api/v1/grupos'
 
 const tablaGruposForm = () => {
 
@@ -35,7 +35,7 @@ const tablaGruposForm = () => {
     const eliminarCampo=(id)=>{
         const cookie= Cookie.get('token')
         axios.defaults.headers.Authorization='Bearer '+cookie;
-        axios.delete('https://linxcoexpress-production.up.railway.app/api/v1/grupos/'+id+'')
+        axios.delete('http://localhost:3000/api/v1/grupos/'+id+'')
         navigate('/grupoF')
     }
     return (

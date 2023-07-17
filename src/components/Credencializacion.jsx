@@ -16,7 +16,7 @@ const Credencializacion = () =>{
     const{addOperacion}=React.useContext(AppContext);
 
     const getDatosCredencial=()=>{
-        const rta=axios.get('https://linxcoexpress-production.up.railway.app/api/v1/tramites/credenciales/factura/'+matriculaAlumno)
+        const rta=axios.get('http://localhost:3000/api/v1/tramites/credenciales/factura/'+matriculaAlumno)
             .then(res=>{
                 setFactura(res.data[0])
                 setNumero(res.data[0].numero_comprobante)
@@ -28,7 +28,7 @@ const Credencializacion = () =>{
         const dta={
             'matriculaAlumno':matricula
         }
-        const rta= await  axios.post('https://linxcoexpress-production.up.railway.app/api/v1/tramites/credencial',dta)
+        const rta= await  axios.post('http://localhost:3000/api/v1/tramites/credencial',dta)
 
         //FACTURA
         const data = {
@@ -42,7 +42,7 @@ const Credencializacion = () =>{
         const cookie = Cookie.get("token");
         axios.defaults.headers.Authorization = "Bearer " + cookie;
         const res = await axios
-            .post("https://linxcoexpress-production.up.railway.app/api/v1/factura", data)
+            .post("http://localhost:3000/api/v1/factura", data)
             .then(res=>{
                 idF = res.data;
                 const dtaRazonfFactura = {
@@ -50,7 +50,7 @@ const Credencializacion = () =>{
                     claveRazon: 'CR323',
                 };
                  axios.post(
-                    "https://linxcoexpress-production.up.railway.app/api/v1/razonf-factura",
+                    "http://localhost:3000/api/v1/razonf-factura",
                     dtaRazonfFactura
                 );
             });
@@ -69,7 +69,7 @@ const Credencializacion = () =>{
         const cookie = Cookie.get("token");
         axios.defaults.headers.Authorization = "Bearer " + cookie;
         const res = axios
-            .patch("https://linxcoexpress-production.up.railway.app/api/v1/factura/"+factura.id_factura, data);
+            .patch("http://localhost:3000/api/v1/factura/"+factura.id_factura, data);
 
         addOperacion('credencial')
         navigate('/control/credencializacion');

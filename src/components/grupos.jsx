@@ -16,14 +16,14 @@ const Grupos = () => {
     const getGrupo=async (user, clave)=>{
         const cookie= Cookie.get('token')
         axios.defaults.headers.Authorization='Bearer '+cookie;
-        const rta= axios.get('https://linxcoexpress-production.up.railway.app/api/v1/grupos/maestro/'+user.clave+'/'+clave+'').then(rest => {
+        const rta= axios.get('http://localhost:3000/api/v1/grupos/maestro/'+user.clave+'/'+clave+'').then(rest => {
             console.log(rest)
             setGrupo(rest.data)
         });
     }
 
     const getGrrupoByCarrera= async ()=>{
-        const rta=await axios.get('https://linxcoexpress-production.up.railway.app/api/v1/grupos/carrera/'+clave)
+        const rta=await axios.get('http://localhost:3000/api/v1/grupos/carrera/'+clave)
             .then(res=>{
                 console.log(res.data)
                 setGrupo(res.data)
@@ -57,7 +57,7 @@ const Grupos = () => {
                 <div className="mate justify-content-center row">
                         {grupo.map((grupos)=>(
                             <div className="botones mr-3" key={grupos.id}>
-                            <button type="button " className="btngru btn-outline-primary" onClick={()=>{handeleClick(grupos.id_grupo)}}
+                            <button type="button " className="btngru btn-outline-primary" onClick={()=>{handeleClick(grupos.id)}}
                             style={{color:"cyan"}}>{grupos.grupo}</button>
                             </div>
                         ))}

@@ -20,7 +20,7 @@ const periodo = () =>{
         }
         const cookie= Cookie.get('token')
         axios.defaults.headers.Authorization='Bearer '+cookie;
-		axios.post('https://linxcoexpress-production.up.railway.app/api/v1/periodo',data) //llegan lixnco, despues dependiendo se va a la funcipon y se ejecuta el query
+		axios.post('http://localhost:3000/api/v1/periodo',data) //llegan lixnco, despues dependiendo se va a la funcipon y se ejecuta el query
         actualizarInputs()
     }
     const updateClik=(e)=>{
@@ -31,7 +31,7 @@ const periodo = () =>{
         }
         const cookie= Cookie.get('token')
         axios.defaults.headers.Authorization='Bearer '+cookie;
-        axios.patch('https://linxcoexpress-production.up.railway.app/api/v1/periodo/'+id2+'',data)
+        axios.patch('http://localhost:3000/api/v1/periodo/'+id2+'',data)
         navigate('/periodo/Ver')
     }
     const [numeroPeriodo,setnumeroPeriodo]=useState('')
@@ -45,7 +45,7 @@ const periodo = () =>{
     },[])
     function llenarCamposPeri(id2){
         console.log(id2)
-		const rta = axios.get('https://linxcoexpress-production.up.railway.app/api/v1/periodo/'+id2+'').then(rest=>{
+		const rta = axios.get('http://localhost:3000/api/v1/periodo/'+id2+'').then(rest=>{
             
         setnumeroPeriodo(rest.data.numero)
         setdescripcionPeriodo(rest.data.descripcion)

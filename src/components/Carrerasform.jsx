@@ -28,7 +28,7 @@ const Carrerasform=()=>{
         }
         const cookie= Cookie.get('token')
         axios.defaults.headers.Authorization='Bearer '+cookie;
-		axios.post('https://linxcoexpress-production.up.railway.app/api/v1/carrera',data) //llegan lixnco, despues dependiendo se va a la funcipon y se ejecuta el query
+		axios.post('http://localhost:3000/api/v1/carrera',data) //llegan lixnco, despues dependiendo se va a la funcipon y se ejecuta el query
         actualizarInputs()
     }
     
@@ -42,7 +42,7 @@ const Carrerasform=()=>{
         }
         const cookie= Cookie.get('token')
         axios.defaults.headers.Authorization='Bearer '+cookie;
-        axios.patch('https://linxcoexpress-production.up.railway.app/api/v1/carrera/'+clave+'',data)
+        axios.patch('http://localhost:3000/api/v1/carrera/'+clave+'',data)
         navigate('/carrera/Ver')
     }
 
@@ -67,7 +67,7 @@ const Carrerasform=()=>{
     },[])
     function llenarCampos(clave){
         console.log(clave)
-		const rta = axios.get('https://linxcoexpress-production.up.railway.app/api/v1/carrera/'+clave+'').then(rest=>{
+		const rta = axios.get('http://localhost:3000/api/v1/carrera/'+clave+'').then(rest=>{
             
         setclaveCarrera(rest.data.clave)
         setnombreCarrera(rest.data.nombre)

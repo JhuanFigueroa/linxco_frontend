@@ -28,7 +28,7 @@ const MaestroForm = ()=> {
         }
         const cookie= Cookie.get('token')
         axios.defaults.headers.Authorization='Bearer '+cookie;
-		axios.post('https://linxcoexpress-production.up.railway.app/api/v1/maestros',data) //llegan lixnco, despues dependiendo se va a la funcipon y se ejecuta el query
+		axios.post('http://localhost:3000/api/v1/maestros',data) //llegan lixnco, despues dependiendo se va a la funcipon y se ejecuta el query
 		actualizarInputs()
     }
     function updateClik(e){
@@ -42,7 +42,7 @@ const MaestroForm = ()=> {
         }
         const cookie= Cookie.get('token')
         axios.defaults.headers.Authorization='Bearer '+cookie;
-		axios.patch('https://linxcoexpress-production.up.railway.app/api/v1/maestros/'+clave+'',data) //llegan lixnco, despues dependiendo se va a la funcipon y se ejecuta el query
+		axios.patch('http://localhost:3000/api/v1/maestros/'+clave+'',data) //llegan lixnco, despues dependiendo se va a la funcipon y se ejecuta el query
 		navigate('/maestroForm/consulta')
     }
     function actualizarInputs(){
@@ -77,14 +77,14 @@ const MaestroForm = ()=> {
         }
  	},[]);
  	function getRol(){
-		const roles = axios.get('https://linxcoexpress-production.up.railway.app/api/v1/empleados')
+		const roles = axios.get('http://localhost:3000/api/v1/empleados')
 		.then((res) => {
 			//console.log(res.data);
 			settipoRol(res.data.empleados)
 		});
 	}
     function llenarCamposMtro(clave){
-        const rta = axios.get('https://linxcoexpress-production.up.railway.app/api/v1/maestros/'+clave+'').then(rest=>{
+        const rta = axios.get('http://localhost:3000/api/v1/maestros/'+clave+'').then(rest=>{
             setclaveMtro(rest.data.clave)
             setnombreMtro(rest.data.nombre)
             setapellido_paternoMtro(rest.data.apellido_paterno)

@@ -16,7 +16,7 @@ const VistaPeriodo = () =>{
     const [datosPeriodo, setdatosPeriodo]=useState([])
 
     function llenarTablaPe(){
-        const rta = axios.get('https://linxcoexpress-production.up.railway.app/api/v1/periodo').then(rest=>{setdatosPeriodo(rest.data.verperiodos)})
+        const rta = axios.get('http://localhost:3000/api/v1/periodo').then(rest=>{setdatosPeriodo(rest.data.verperiodos)})
     }
     useEffect(() => {
         llenarTablaPe()
@@ -38,7 +38,7 @@ const VistaPeriodo = () =>{
     function eliminarCampo(id2){
         const cookie= Cookie.get('token')
         axios.defaults.headers.Authorization='Bearer '+cookie;
-        axios.delete('https://linxcoexpress-production.up.railway.app/api/v1/periodo/'+id2+'')
+        axios.delete('http://localhost:3000/api/v1/periodo/'+id2+'')
         llenarTablaPe()
     }
 

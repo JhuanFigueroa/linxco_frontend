@@ -13,23 +13,23 @@ const ConstanciaDatos =()=>{
     const [fecha, setFecha] = useState(null);
     const [idFactura,setIdFactura]=useState('')
     const getFactura=()=>{
-        const rta=axios.get('https://linxcoexpress-production.up.railway.app/api/v1/factura/constancias/'+matricula)
+        const rta=axios.get('http://localhost:3000/api/v1/factura/constancias/'+matricula)
             .then(res=>{
                 setNumero(res.data[0].numero)
                 setIdFactura(res.data[0].id)
             });
     }
     const getTipoFactura=()=>{
-        const rta=axios.get('https://linxcoexpress-production.up.railway.app/api/v1/constancias/tipos/'+matricula)
+        const rta=axios.get('http://localhost:3000/api/v1/constancias/tipos/'+matricula)
             .then(res=>{
-                const dta=axios.get('https://linxcoexpress-production.up.railway.app/api/v1/constancias/tipo/'+res.data[0].tipo)
+                const dta=axios.get('http://localhost:3000/api/v1/constancias/tipo/'+res.data[0].tipo)
                     .then(r=>{
                         setTipoConstancia(r.data)
                     })
             })
     }
     const getDatosAlumnos=()=>{
-        const rta=axios.get('https://linxcoexpress-production.up.railway.app/api/v1/alumnos/constancia/'+matricula)
+        const rta=axios.get('http://localhost:3000/api/v1/alumnos/constancia/'+matricula)
             .then(res=>{
                 setAlumno(res.data[0])
             })
@@ -41,25 +41,25 @@ const ConstanciaDatos =()=>{
             "clave":claveConstancia,
             "fecha":fecha
         }
-        const rta=axios.post('https://linxcoexpress-production.up.railway.app/api/v1/constancias',data)
+        const rta=axios.post('http://localhost:3000/api/v1/constancias',data)
         //clave
         const dta={
             "idTipo":tipoConstancia.id,
             "claveConstancia":claveConstancia
         }
-        const rpta=axios.post('https://linxcoexpress-production.up.railway.app/api/v1/constancias/cons-tipo',dta)
+        const rpta=axios.post('http://localhost:3000/api/v1/constancias/cons-tipo',dta)
 
         const dat={
             "claveConstancia":claveConstancia,
             "matriculaAlumno":matricula
         }
-        const res=axios.post('https://linxcoexpress-production.up.railway.app/api/v1/constancias/cons-alumno',dat)
+        const res=axios.post('http://localhost:3000/api/v1/constancias/cons-alumno',dat)
 
         const da={
             "matricula":matricula,
             "numero":numero
         }
-        const act=axios.post('https://linxcoexpress-production.up.railway.app/api/v1/factura/pagar',da)
+        const act=axios.post('http://localhost:3000/api/v1/factura/pagar',da)
     }
 
     const handleClick=()=>{

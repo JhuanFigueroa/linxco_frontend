@@ -8,34 +8,50 @@ import Cookie from "js-cookie";
 
 let alumnos = [];
 const FormActas = () => {
-    let desempeño=''
-    let calificacion=''
     const auth=useAuth()
     const periodo = auth.periodo;
     const user=auth.user
     const {state} = useContext(AppContext);
-    const operacion = state.operacion;
     const navigate = useNavigate();
     const {materia} = useParams()
     const {grupo} = useParams()
 
     const [studentsReins, setStudentsReins] = useState([]);
     const{addOperacion}=React.useContext(AppContext);
-    const [calificaciones,setCalificaciones]=useState([])
     const [califC,setCalifC]=useState('')
-    const [desempC,setDesempC]=useState('')
-    const [desempeños,setDesempeños]=useState([])
+    const [desempeñoC,setDesempeñoC]=useState('')
     const [id,setId]=useState('')
 
-    const getEstudiantes = () => {
+    const cambiarDesempeño=(index,e)=>{
+        const newValue = e.target.value;
+
+        setStudentsReins(prevData => {
+            prevData[index].calificacion = newValue;
+            prevData[index].desempeño = newValue * 2;
+            if (newValue>=70 && newValue<80){
+                prevData[index].desempeño ='SUFICIENTE';
+            }
+            if (newValue>=80 && newValue<90){
+                prevData[index].desempeño ='NOTABLE';
+            }
+            if (newValue>=90){
+                prevData[index].desempeño ='EXCELENTE';
+            }
+            return [...prevData];
+        });
+
+    }
+
+
+    const getEstudiantes = async () => {
 
         const cookie = Cookie.get("token");
         axios.defaults.headers.Authorization = "Bearer " + cookie;
-        const rta = axios
-            .get("https://linxcoexpress-production.up.railway.app/api/v1/acta-calif/alumnos/" + materia+"/"+grupo)
+        const rta =  await axios
+            .get("http://localhost:3000/api/v1/acta-calif/alumnos/" + materia+"/"+grupo)
             .then((res) => {
-                console.log(res.data)
-                setStudentsReins(res.data);
+                const json=res.data
+                setStudentsReins(json.map(item=>({...item,calificacion: 0,desempeño:''})));
             });
     };
 
@@ -45,13 +61,13 @@ const FormActas = () => {
         for (let i = 0; i <studentsReins.length; i++) {
             const data={
                 "folio":`${Math.random()}`,
-                "calificacion":calificaciones[i],
+                "calificacion":studentsReins[i].calificacion,
                 "fecha":hoy,
                 "claveMateria":materia,
                 "matriculaAlumno":studentsReins[i].matricula,
                 "idPeriodo":id
             }
-           const rta=axios.post('https://linxcoexpress-production.up.railway.app/api/v1/acta-calif',data)
+            const rta=axios.post('http://localhost:3000/api/v1/acta-calif',data)
         }
         navigate('/home')
     };
@@ -59,83 +75,66 @@ const FormActas = () => {
     useEffect(() => {
         setId(periodo[0].id)
         getEstudiantes()
+
     }, []);
 
 
-        return (
-            <section className="contenedor-estudiantes">
-                <nav className="buscador d-flex align-items-center">
-                    <form className="form-inline">
-                        <input
-                            className="form-control mr-sm-2 col-7"
-                            type="search"
-                            style={{width: "700px"}}
-                            placeholder="Search"
-                            aria-label="Search"
-                        />
-                        <button className="btn btn-outline-primaryy mt-7" type="submit">
-                            Buscar
-                        </button>
-                    </form>
-                </nav>
-                <br></br>
-                <table className="table table-bordered">
-                    <thead>
-                    <tr>
-                        <th scope="col">MATRICULA</th>
-                        <th scope="col">NOMBRE COMPLETO</th>
-                        <th scope="col">CALIFICACION</th>
-                    </tr>
-                    </thead>
-                    <tbody>
+    return (
+        <section className="contenedor-estudiantes">
+            <nav className="buscador d-flex align-items-center">
+                <form className="form-inline">
+                    <input
+                        className="form-control mr-sm-2 col-7"
+                        type="search"
+                        style={{width: "700px"}}
+                        placeholder="Search"
+                        aria-label="Search"
+                    />
+                    <button className="btn btn-outline-primaryy mt-7" type="submit">
+                        Buscar
+                    </button>
+                </form>
+            </nav>
+            <br></br>
+            <table className="table table-bordered">
+                <thead>
+                <tr>
+                    <th scope="col">MATRICULA</th>
+                    <th scope="col">NOMBRE COMPLETO</th>
+                    <th scope="col">CALIFICACION</th>
+                    <th>DESEMPEÑO</th>
+                </tr>
+                </thead>
+                <tbody>
 
-                    {
-                        studentsReins.map((estudiante) => {
-                             return(
-                                 <tr key={estudiante.matricula}>
-                                     <td>{estudiante.matricula}</td>
-                                     <td>{estudiante.nombre}</td>
-                                     <td><input type="text" className="textTR" style={{color: "white", width: "100%"}}
-                                                onChange={(e) => {
-                                                    if (e.currentTarget.value >= 70) {
-                                                        let calif = calificaciones
-                                                        calificacion = e.currentTarget.value
-                                                        calif.push(calificacion)
-                                                        setCalificaciones(calif)
-                                                        setCalifC(calificacion)
+                {
+                    studentsReins.map((estudiante,index) =>
+                        (
+                            <tr key={estudiante.matricula}>
+                                <td>{estudiante.matricula}</td>
+                                <td>{estudiante.nombre}</td>
+                                <td><input type="text" className="textTR" style={{color: "white", width: "100%"}}
+                                           value={estudiante.calificacion}
+                                           onChange={cambiarDesempeño.bind(this,index)}
+                                />
+                                </td>
 
-                                                        if (calificacion < 70) {
-                                                            desempeño = 'NA'
-                                                        } else if (calificacion >= 70 && calificacion < 80) {
-                                                            desempeño = 'SUFICIENTE'
-                                                        } else if (calificacion >= 80 && calificacion < 90) {
-                                                            desempeño = 'NOTABLE'
-                                                        } else if (calificacion >= 90) {
-                                                            desempeño = 'EXCELENTE'
-                                                        }
+                                <td>{estudiante.desempeño}</td>
+                            </tr>
+                        )
 
-                                                        let desemp = desempeños
-                                                        desemp.push(desempeño)
-                                                        setDesempeños(desemp)
-                                                    }
-                                                }}/>
-                                     </td>
+                    )}
+                </tbody>
 
-                                 </tr>
-                             )
-                            }
-                        )}
-                    </tbody>
-
-                </table>
-                <div className="button row justify-content-center pt-3" >
-                    <div className="text-center">
-                        <button type="button" className="btn btn-outline-primary" onClick={handleClick} style={{color:"white", width: "250px"}}>Guardar</button>
-                    </div>
-
+            </table>
+            <div className="button row justify-content-center pt-3" >
+                <div className="text-center">
+                    <button type="button" className="btn btn-outline-primary" onClick={handleClick} style={{color:"white", width: "250px"}}>Guardar</button>
                 </div>
-            </section>
-        );
+
+            </div>
+        </section>
+    );
 
 };
 

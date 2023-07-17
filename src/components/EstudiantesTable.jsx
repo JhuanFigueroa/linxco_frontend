@@ -22,7 +22,7 @@ const EstudiantesTable = () => {
         const cookie = Cookie.get("token");
         axios.defaults.headers.Authorization = "Bearer " + cookie;
         const rta = axios
-            .get("https://linxcoexpress-production.up.railway.app/api/v1/tramites/reinscribir/estudiantes/" + clave)
+            .get("http://localhost:3000/api/v1/tramites/reinscribir/estudiantes/" + clave)
             .then((res) => {
                 console.log(res.data)
                 setStudentsReins(res.data);
@@ -30,13 +30,13 @@ const EstudiantesTable = () => {
     };
 
     const getCredenciales=()=>{
-        const rta=axios.get('https://linxcoexpress-production.up.railway.app/api/v1/tramites/credenciales').then(res=>{
+        const rta=axios.get('http://localhost:3000/api/v1/tramites/credenciales').then(res=>{
             setStudentsReins(res.data)
         })
     }
 
     const getBajas=()=>{
-        axios.get('https://linxcoexpress-production.up.railway.app/api/v1/bajas/'+clave)
+        axios.get('http://localhost:3000/api/v1/bajas/'+clave)
             .then((res) => {
                 setStudentsReins(res.data);
             });

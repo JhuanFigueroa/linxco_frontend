@@ -15,7 +15,7 @@ const MaestroConsultas = ()=> {
     const [datosMtro, setdatosMtros]=useState([])
     const idr=null
     function llenarTablaMtro(){
-        const rta = axios.get('https://linxcoexpress-production.up.railway.app/api/v1/maestros').then(rest=>{setdatosMtros(rest.data.maestros1)})
+        const rta = axios.get('http://localhost:3000/api/v1/maestros').then(rest=>{setdatosMtros(rest.data.maestros1)})
     }
     useEffect(() => {
         llenarTablaMtro()
@@ -36,7 +36,7 @@ const MaestroConsultas = ()=> {
     function eliminarCampo(clave1){
         const cookie= Cookie.get('token')
         axios.defaults.headers.Authorization='Bearer '+cookie;
-        axios.delete('https://linxcoexpress-production.up.railway.app/api/v1/maestros/'+clave1+'')
+        axios.delete('http://localhost:3000/api/v1/maestros/'+clave1+'')
         llenarTablaMtro()
     }
     

@@ -12,15 +12,15 @@ const DownloadHorario = () => {
     const [documento,setDocumento]=useState(null)
 
     const obtnenerHorarioAlumno = async () => {
-        const rta = await axios.get('https://linxcoexpress-production.up.railway.app/api/v1/alumnos/' + user.clave)
+        const rta = await axios.get('http://localhost:3000/api/v1/alumnos/' + user.clave)
         claveCarrera = rta.data.claveCarrera
-        const res = await axios.get('https://linxcoexpress-production.up.railway.app/api/v1/horarios/carrera/' + claveCarrera)
+        const res = await axios.get('http://localhost:3000/api/v1/horarios/carrera/' + claveCarrera)
         setDocumento(res.data.ubicacion)
         //console.log(Documento)
     }
 
     const obtenerHorarioControl= async ()=>{
-        const res = await axios.get('https://linxcoexpress-production.up.railway.app/api/v1/horarios/carrera/' + carrera)
+        const res = await axios.get('http://localhost:3000/api/v1/horarios/carrera/' + carrera)
         setDocumento(res.data.ubicacion)
     }
 

@@ -13,7 +13,7 @@ const BajasForm = () => {
     const [matricula,setMatricula]=useState('')
 
     const getRazones=async ()=>{
-        const rta=await axios.get('https://linxcoexpress-production.up.railway.app/api/v1/bajas/razones');
+        const rta=await axios.get('http://localhost:3000/api/v1/bajas/razones');
         setRazones(rta.data)
     }
 
@@ -27,7 +27,7 @@ const BajasForm = () => {
 
         const cookie = Cookie.get("token");
         axios.defaults.headers.Authorization = "Bearer " + cookie;
-        const rta=axios.post('https://linxcoexpress-production.up.railway.app/api/v1/bajas',data)
+        const rta=axios.post('http://localhost:3000/api/v1/bajas',data)
             .then(function (response){
                 idB=response.data
                 const dta={
@@ -36,7 +36,7 @@ const BajasForm = () => {
                 }
 
                 axios.defaults.headers.Authorization = "Bearer " + cookie;
-                const res=axios.post('https://linxcoexpress-production.up.railway.app/api/v1/baja-alumno',dta)
+                const res=axios.post('http://localhost:3000/api/v1/baja-alumno',dta)
                 razonBaja.map(razon=>{
                     const dtaRazobBaja={
                         'idBaja':idB,
@@ -44,7 +44,7 @@ const BajasForm = () => {
                     }
                     const cookie = Cookie.get("token");
                     axios.defaults.headers.Authorization = "Bearer " + cookie;
-                    axios.post('https://linxcoexpress-production.up.railway.app/api/v1/bajas/razones',dtaRazobBaja)
+                    axios.post('http://localhost:3000/api/v1/bajas/razones',dtaRazobBaja)
                 })
             })
 

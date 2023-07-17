@@ -11,7 +11,7 @@ import AppContext from "../context/AppContext";
 const Carreras=()=>{
     const {state}=useContext(AppContext)
     const operacion=state.operacion
-const api="https://linxcoexpress-production.up.railway.app/api/v1/carreras"
+const api="http://localhost:3000/api/v1/carreras"
     const auth = useAuth();
     const user = auth.user;
     const [carreras,setCarreras]=React.useState([]);
@@ -26,7 +26,7 @@ const api="https://linxcoexpress-production.up.railway.app/api/v1/carreras"
     const getCarrerasMaestro = async ()=> {
         const cookie= Cookie.get('token')
         axios.defaults.headers.Authorization='Bearer '+cookie;
-        const rta= await axios.get('https://linxcoexpress-production.up.railway.app/api/v1/semestre/maestro/'+user.clave)
+        const rta= await axios.get('http://localhost:3000/api/v1/semestre/maestro/'+user.clave)
         setCarreras(rta.data)
         
     }

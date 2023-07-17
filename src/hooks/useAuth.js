@@ -2,7 +2,7 @@ import React,{useState,useContext,createContext} from "react";
 import axios from "axios";
 import Cookie from "js-cookie";
 import {useNavigate,Navigate} from "react-router-dom";
-const api='https://linxcoexpress-production.up.railway.app/api/v1/auth/';
+const api='http://localhost:3000/api/v1/auth/';
 const AuthContext =createContext();
 
 function AuthProvider({ children }) {
@@ -34,7 +34,7 @@ function AuthProvider({ children }) {
             axios.defaults.headers.Authorization='Bearer '+cookie;
             const {data:user}= await axios.get(api+'profile');
             auth.setUser(user)
-            const {data:periodo}=await axios.get("https://linxcoexpress-production.up.railway.app/api/v1/tramites/periodo")
+            const {data:periodo}=await axios.get("http://localhost:3000/api/v1/tramites/periodo")
             setPeriodo(periodo)
         }else {
             return <Navigate to="/" />;

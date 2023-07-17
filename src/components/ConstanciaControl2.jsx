@@ -8,7 +8,7 @@ const ConstanciaControl2 = () =>{
     const navigate=useNavigate()
     const [peticiones,setPeticiones]=useState([])
     const getPeticiones=()=>{
-        const rta=axios.get('https://linxcoexpress-production.up.railway.app/api/v1/peticiones/carrera/'+clave)
+        const rta=axios.get('http://localhost:3000/api/v1/peticiones/carrera/'+clave)
             .then(res=>{
                 setPeticiones(res.data)
             })

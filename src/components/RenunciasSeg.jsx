@@ -14,7 +14,7 @@ const RenunciasSeg=()=>{
             'fecha':hoy
         }
 
-        const rta=axios.post('https://linxcoexpress-production.up.railway.app/api/v1/tramites/renuncia-seguro',data)
+        const rta=axios.post('http://localhost:3000/api/v1/tramites/renuncia-seguro',data)
         navigate('/home')
     }
     return(

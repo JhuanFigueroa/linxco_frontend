@@ -27,7 +27,7 @@ const Factura = () =>{
         const cookie = Cookie.get("token");
         axios.defaults.headers.Authorization = "Bearer " + cookie;
         const res = await axios
-            .post("https://linxcoexpress-production.up.railway.app/api/v1/factura", data)
+            .post("http://localhost:3000/api/v1/factura", data)
             .then(res=>{
                 idF = res.data;
                 const dtaRazonfFactura = {
@@ -35,7 +35,7 @@ const Factura = () =>{
                     claveRazon: 'FFD64',
                 };
                 axios.post(
-                    "https://linxcoexpress-production.up.railway.app/api/v1/razonf-factura",
+                    "http://localhost:3000/api/v1/razonf-factura",
                     dtaRazonfFactura
                 );
             });
@@ -46,7 +46,7 @@ const Factura = () =>{
             "tipo":descripcion,
             "matriculaAlumno":user.clave,
         }
-        const rta=await axios.post('https://linxcoexpress-production.up.railway.app/api/v1/tramites/constancias',data)
+        const rta=await axios.post('http://localhost:3000/api/v1/tramites/constancias',data)
     }
 
     const handleClick=()=>{

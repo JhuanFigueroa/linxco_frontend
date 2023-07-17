@@ -7,7 +7,7 @@ const Periodos=()=>{
     const navigate=useNavigate();
     const [periodos,setPeriodos]=useState([])
     const getPeriodos= async ()=>{
-        const rta=axios.get('https://linxcoexpress-production.up.railway.app/api/v1/periodo/all')
+        const rta=axios.get('http://localhost:3000/api/v1/periodo/all')
             .then(res=>{
                 setPeriodos(res.data)
             })

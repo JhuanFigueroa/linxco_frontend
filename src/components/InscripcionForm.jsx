@@ -32,7 +32,7 @@ const InscripcionForm=()=>{
     },[])
     function llenarCamposAspirantes(id2){
         console.log(id2)
-        const rta = axios.get('https://linxcoexpress-production.up.railway.app/api/v1/admision/'+id2+'').then(rest=>{
+        const rta = axios.get('http://localhost:3000/api/v1/admision/'+id2+'').then(rest=>{
   
         setnumero_ficha_admision(rest.data.numero)
         setnombre_admision(rest.data.nombre)
@@ -65,7 +65,7 @@ const InscripcionForm=()=>{
         }
         const cookie= Cookie.get('token')
         axios.defaults.headers.Authorization='Bearer '+cookie;
-        axios.post('https://linxcoexpress-production.up.railway.app/api/v1/alumnos',data)
+        axios.post('http://localhost:3000/api/v1/alumnos',data)
         navigate('/inscripcion/documentos/'+id2+'')
     }
     return(

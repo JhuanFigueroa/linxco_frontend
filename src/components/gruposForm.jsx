@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import AppContext from "../context/AppContext";
 
-const API ='https://linxcoexpress-production.up.railway.app/api/v1/admision'
+const API ='http://localhost:3000/api/v1/admision'
 
 const gruposForm = () => {
 
@@ -31,7 +31,7 @@ const gruposForm = () => {
         }
         const cookie= Cookie.get('token')
         axios.defaults.headers.Authorization='Bearer '+cookie;
-        axios.post('https://linxcoexpress-production.up.railway.app/api/v1/grupos/',data)
+        axios.post('http://localhost:3000/api/v1/grupos/',data)
         navigate('/gruposForm/Ver')
     }
     const updateClik=(e)=>{
@@ -43,7 +43,7 @@ const gruposForm = () => {
         }
         const cookie= Cookie.get('token')
         axios.defaults.headers.Authorization='Bearer '+cookie;
-        axios.patch('https://linxcoexpress-production.up.railway.app/api/v1/grupos/'+id2+'',dataA)
+        axios.patch('http://localhost:3000/api/v1/grupos/'+id2+'',dataA)
         navigate('/gruposForm/Ver')
     }
     useEffect(()=>{
@@ -59,7 +59,7 @@ const gruposForm = () => {
     }, [])
     function llenarCamposGrupos(id2){
         console.log(id2)
-        const rta = axios.get('https://linxcoexpress-production.up.railway.app/api/v1/grupos/'+id2+'').then(rest=>{
+        const rta = axios.get('http://localhost:3000/api/v1/grupos/'+id2+'').then(rest=>{
 
         setnumeroGrupo(rest.data.numero)
         setClaveCarrera(rest.data.claveCarrera)

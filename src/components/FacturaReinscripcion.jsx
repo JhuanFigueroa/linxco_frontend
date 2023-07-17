@@ -26,14 +26,14 @@ const FacturaReinscripcion = () => {
         let razonesF = [];
         const rta = await axios
             .get(
-                "https://linxcoexpress-production.up.railway.app/api/v1/factura/reinscripcion/" + matriculaAlumno
+                "http://localhost:3000/api/v1/factura/reinscripcion/" + matriculaAlumno
             )
             .then((res) => {
                 numFactu = res.data[0].numero;
                 setNumComprobante(numFactu);
                 const clavesF = axios
                     .get(
-                        "https://linxcoexpress-production.up.railway.app/api/v1/razonf-factura/factura/" + numFactu
+                        "http://localhost:3000/api/v1/razonf-factura/factura/" + numFactu
                     )
                     .then((res) => {
                         razonesF = facturas;
@@ -47,7 +47,7 @@ const FacturaReinscripcion = () => {
         let factT = [];
         facturas.map((factura) => {
             axios
-                .get("https://linxcoexpress-production.up.railway.app/api/v1/factura/tipos/" + factura)
+                .get("http://localhost:3000/api/v1/factura/tipos/" + factura)
                 .then((res) => {
                     factT.push(res.data[0]);
                     setFacturasC(factT);
@@ -58,7 +58,7 @@ const FacturaReinscripcion = () => {
     const getTipoFactura = async () => {
         const cookie = Cookie.get("token");
         axios.defaults.headers.Authorization = "Bearer " + cookie;
-        const rta = await axios.get("https://linxcoexpress-production.up.railway.app/api/v1/factura/tipos");
+        const rta = await axios.get("http://localhost:3000/api/v1/factura/tipos");
         setTipoFactura(rta.data);
     };
 
@@ -78,7 +78,7 @@ const FacturaReinscripcion = () => {
         let factT = [];
         facturas.map((factura) => {
             axios
-                .get("https://linxcoexpress-production.up.railway.app/api/v1/factura/tipos/" + factura)
+                .get("http://localhost:3000/api/v1/factura/tipos/" + factura)
                 .then((res) => {
                     factT.push(res.data[0]);
                     setFacturasC(factT);
@@ -98,7 +98,7 @@ const FacturaReinscripcion = () => {
         const cookie = Cookie.get("token");
         axios.defaults.headers.Authorization = "Bearer " + cookie;
         const rta = axios
-            .post("https://linxcoexpress-production.up.railway.app/api/v1/factura", data)
+            .post("http://localhost:3000/api/v1/factura", data)
             .then(function (response) {
                 idF = response.data;
                 facturasC.map((factura) => {
@@ -107,7 +107,7 @@ const FacturaReinscripcion = () => {
                         claveRazon: factura.clave_razon_factura,
                     };
                     axios.post(
-                        "https://linxcoexpress-production.up.railway.app/api/v1/razonf-factura",
+                        "http://localhost:3000/api/v1/razonf-factura",
                         dtaRazonfFactura
                     );
                 });
@@ -117,7 +117,7 @@ const FacturaReinscripcion = () => {
             matricula: user.clave,
         };
 
-        axios.post("https://linxcoexpress-production.up.railway.app/api/v1/tramites/reinscribir", matricula);
+        axios.post("http://localhost:3000/api/v1/tramites/reinscribir", matricula);
         console.log(matricula);
         console.log(data);
     };
@@ -127,7 +127,7 @@ const FacturaReinscripcion = () => {
             'folio': numComprobante,
             'matricula': matriculaAlumno
         }
-        const rta = axios.post('https://linxcoexpress-production.up.railway.app/api/v1/tramites/reinscribir-alumno', data)
+        const rta = axios.post('http://localhost:3000/api/v1/tramites/reinscribir-alumno', data)
     }
     const deleteRazonFactura = (factura) => {
         facts = facturasC;
